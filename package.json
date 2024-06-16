@@ -11,7 +11,8 @@
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write .",
 		"deploy": "npm run build && wrangler pages deploy",
-		"cf-typegen": "wrangler types && mv worker-configuration.d.ts src/"
+		"cf-typegen": "wrangler types && mv worker-configuration.d.ts src/",
+		"dev-build": "npm run build && wrangler pages dev .svelte-kit/cloudflare"
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "^4.20240614.0",
