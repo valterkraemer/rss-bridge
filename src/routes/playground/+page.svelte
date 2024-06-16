@@ -6,7 +6,7 @@
 		getPosts,
 	} from "$lib/htmlParser";
 
-	let url = $state("https://rocicorp.dev/blog");
+	let url = $state("");
 	let itemSelector = $state("");
 	let linkSelector = $state("");
 	let headingSelector = $state("");
@@ -62,6 +62,10 @@
 }`;
 	});
 </script>
+
+<h1>Playground</h1>
+
+<p>Create the config a URL</p>
 
 <table>
 	<tbody>
