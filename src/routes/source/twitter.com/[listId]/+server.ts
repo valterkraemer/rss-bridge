@@ -1,6 +1,6 @@
 import { z } from "zod";
 import type { RequestHandler } from "./$types";
-import { json, text } from "@sveltejs/kit";
+import { error, json, text } from "@sveltejs/kit";
 import { toRss } from "$lib/toRss";
 
 const key = "twitter.com/i/lists/";
@@ -95,6 +95,12 @@ export const POST: RequestHandler = async ({
 	url,
 }) => {
 	const { listId } = Params.parse(params);
+	const apiKey = request.headers.get("X-API-key");
+
+	if (apiKey !== "123") {
+		return error(403, "Forbidden");
+	}
+
 	const data = await request.json();
 
 	const tweets = Tweets.parse(data);
