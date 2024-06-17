@@ -10,3 +10,7 @@ id = "4eb35ec7a7d14d6487847ea9759b79f9"
 [env.production.vars]
 NODE_VERSION = "20.12"
 NPM_VERSION = "10"
+
+[[env.production.kv_namespaces]]
+binding = "ITEM"
+id = "4eb35ec7a7d14d6487847ea9759b79f9"
