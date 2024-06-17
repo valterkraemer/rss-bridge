@@ -16,7 +16,7 @@ export type RssItem = {
 
 export type RssParams = {
 	title: string;
-	description: string;
+	description?: string;
 	currentUrl: string;
 	targetUrl: string;
 	items: RssItem[];
