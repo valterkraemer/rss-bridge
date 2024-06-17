@@ -1,5 +1,7 @@
-// See https://kit.svelte.dev/docs/types#app
-// for information about these interfaces
+export type Env = {
+	ITEM: KVNamespace;
+};
+
 declare global {
 	namespace App {
 		interface Platform {
