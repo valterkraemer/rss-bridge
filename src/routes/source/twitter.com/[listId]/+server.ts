@@ -97,7 +97,7 @@ export const POST: RequestHandler = async ({
 	const { listId } = Params.parse(params);
 	const apiKey = request.headers.get("X-API-key");
 
-	if (apiKey !== "123") {
+	if (apiKey !== platform?.env.API_KEY) {
 		return error(403, "Forbidden");
 	}
 

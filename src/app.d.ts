@@ -1,5 +1,6 @@
 export type Env = {
 	ITEM: KVNamespace;
+	API_KEY: string;
 };
 
 declare global {
